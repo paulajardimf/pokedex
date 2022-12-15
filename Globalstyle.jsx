@@ -5,9 +5,10 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
   }
   #root {
-    max-width: 1200px;
+    max-width: 1700px;
     margin: 0 auto;
   }
 
