@@ -26,7 +26,7 @@ export default function Homepage() {
     <HomePageStyled>
       <Header />
       <section className="container-pokemons">
-        <h1>Todos os Pokémons</h1>
+        <h1 className="title">Todos os Pokémons</h1>
         <section className="container-pokemon">
           {pokelist.map((pokemon) => {
             return (

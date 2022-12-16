@@ -7,11 +7,11 @@ export const HomePageStyled = styled.header`
   .container-pokemons {
     margin: 30px;
   }
-  h1 {
+  .title {
     font-weight: 700;
     font-size: 3rem;
     color: #ffffff;
-    margin-left: 30px;
+    margin-left: 35px;
   }
   .container-pokemon {
     display: flex;
