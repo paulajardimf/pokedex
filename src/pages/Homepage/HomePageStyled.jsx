@@ -2,19 +2,19 @@ import styled from "styled-components";
 
 export const HomePageStyled = styled.header`
   background-color: #5d5d5d;
-  height: auto;
   display: flex;
   flex-direction: column;
-  section{
+  .container-pokemons {
     margin: 30px;
   }
-  h1{
+  h1 {
     font-weight: 700;
     font-size: 3rem;
-    color: #FFFFFF;
+    color: #ffffff;
   }
-  .container-pokemons{
+  .container-pokemon {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 `;
