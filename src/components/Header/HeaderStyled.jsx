@@ -1,23 +1,32 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const HeaderStyled = styled.header`
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   height: 10rem;
-  border-bottom: 1px solid black;
   display: flex;
-  justify-content: flex-end;
-  gap: 200px;
+  position: relative;
   align-items: center;
 
-  button{
-    background-color: #33A4F5;
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  button {
+    background-color: #33a4f5;
     border-radius: 8px;
     border: none;
     width: 17.938rem;
     height: 4.625rem;
-    color: #FFFFFF;
+    color: #ffffff;
     font-weight: 700;
     font-size: 1.5rem;
     margin-right: 30px;
+    position: absolute;
+    top: 50%;
+    left: 90%;
+    transform: translate(-50%, -50%);
   }
-`
+`;
