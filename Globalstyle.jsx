@@ -8,8 +8,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Poppins', sans-serif;
   }
   #root {
-    max-width: 1700px;
+    max-width: 1900px;
     margin: 0 auto;
   }
-
 `;

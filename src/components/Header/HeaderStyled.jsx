@@ -23,10 +23,10 @@ export const HeaderStyled = styled.header`
     color: #ffffff;
     font-weight: 700;
     font-size: 1.5rem;
-    margin-right: 30px;
+    
     position: absolute;
     top: 50%;
-    left: 90%;
+    left: 87%;
     transform: translate(-50%, -50%);
   }
 `;
