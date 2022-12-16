@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Header from "../../components/Header/Header";
 import PokemonCard from "../../components/PokemonCard/PokemonCard";
 import { HomePageStyled } from "./HomePageStyled";
 import { BASE_URL } from "../../constants/url";
 import axios from "axios";
+import {GlobalContext} from "../../contexts/GlobalContext"
 
 export default function Homepage() {
   const [pokelist, setPokelist] = useState([]);
@@ -24,12 +25,12 @@ export default function Homepage() {
   return (
     <HomePageStyled>
       <Header />
-      <section>
-        <h1>Todos os Pokémons</h1>
-        <section className="container-pokemons">
+      <section className="container-pokemons">
+        <h1 className="title">Todos os Pokémons</h1>
+        <section className="container-pokemon">
           {pokelist.map((pokemon) => {
             return (
-              <PokemonCard pokemonUrl={pokemon.url} pokemon={pokemon} key={pokemon.name} />
+              <PokemonCard pokemonUrl={pokemon.url} pokemon={pokemon} key={pokemon.id} />
             );
           })}
         </section>

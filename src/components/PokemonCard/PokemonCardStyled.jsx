@@ -2,13 +2,13 @@ import styled from "styled-components";
 
 export const PokemonCardStyled = styled.div`
   padding: 16px;
-  min-width: 400px;
-  max-width: 440px;
+  width: 440px;
+  height: 210px;
   background-color: ${(props) => props.color};
   border-radius: 12px;
   display: flex;
   position: relative;
-  margin: 50px;
+  margin: 33px;
   color: #ffffff;
 
   p {
@@ -26,11 +26,13 @@ export const PokemonCardStyled = styled.div`
     margin-bottom: 10px;
   }
   .name{
-      text-transform: capitalize;
-    }
+    text-transform: capitalize;
+  }
 
   .container.tipo {
+    width: 250px;
     margin-bottom: 52px;
+
     img {
       max-width: 100px;
       height: 32px;
@@ -40,6 +42,13 @@ export const PokemonCardStyled = styled.div`
       margin-right: 8px;
     }
   }
+
+  .detalhes{
+    position: absolute;
+    bottom: 20px;
+    color: #ffffff;
+  }
+
   .img-pokemon {
     width: 193px;
     height: 193px;
