@@ -14,7 +14,7 @@ export const HeaderStyled = styled.header`
     transform: translate(-50%, -50%);
   }
 
-  button {
+  .button-pokedex {
     background-color: #33a4f5;
     border-radius: 8px;
     border: none;
@@ -28,5 +28,14 @@ export const HeaderStyled = styled.header`
     top: 50%;
     left: 87%;
     transform: translate(-50%, -50%);
+  }
+
+  .button-homepage{
+    background-color: transparent;
+    border: none;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    margin-left: 30px;
   }
 `;
