@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const HomePageStyled = styled.header`
+export const HomePageStyled = styled.main`
   background-color: #5d5d5d;
   display: flex;
   flex-direction: column;
