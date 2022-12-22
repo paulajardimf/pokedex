@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Homepage from "../pages/Homepage/Homepage";
 import PokedexPage from "../pages/PokedexPage/PokedexPage"
-import PokemonPage from "../pages/PokemonPage/PokemonPage"
+import DetailPage from "../pages/DetailPage/DetailPage"
 
 
 export default function Router() {
@@ -10,7 +10,7 @@ export default function Router() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/pokedex" element={<PokedexPage />} />
-        <Route path="/detalhes/:name" element={<PokemonPage />} />
+        <Route path="/detalhes/:name" element={<DetailPage />} />
       </Routes>
     </BrowserRouter>
   );

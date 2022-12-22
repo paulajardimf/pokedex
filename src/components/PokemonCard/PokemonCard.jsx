@@ -3,7 +3,7 @@ import { PokemonCardStyled } from "./PokemonCardStyled";
 import pokeball from "../../assets/pngwing 2.png";
 import { getPokemonType } from "../../constants/types";
 import axios from "axios";
-import { goToPokemonPage } from "../../routes/coordinator";
+import { goToDetailPage } from "../../routes/coordinator";
 import { useNavigate } from "react-router-dom";
 import { GlobalContext } from "../../contexts/GlobalContext";
 import { getPokemonColor } from "../../utils/ReturnGetPokemonColor";
@@ -46,8 +46,8 @@ const PokemonCard = ({ pokemonUrl, pokemon }) => {
         <p
           className="detalhes"
           onClick={() => {
-            goToPokemonPage(navigate, pokemon.name);
-            setPage("PokemonPage"); 
+            goToDetailPage(navigate, pokemon.name);
+            setPage("DetailPage"); 
           }}
         >
           Detalhes

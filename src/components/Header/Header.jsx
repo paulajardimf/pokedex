@@ -31,10 +31,10 @@ export default function Header() {
             goToHomePage(navigate);
           }}
         >
-          {"< Todos os Pokémons"}
+          {"< Todos Pokémons"}
         </button>
       )}
-      {page === "PokemonPage" && (
+      {page === "DetailPage" && (
         <>
           <button
             className="button-homepage"
