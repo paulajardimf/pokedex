@@ -47,6 +47,7 @@ export const PokemonCardStyled = styled.div`
     position: absolute;
     bottom: 20px;
     color: #ffffff;
+    cursor: pointer;
   }
 
   .img-pokemon {
