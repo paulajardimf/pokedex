@@ -65,7 +65,7 @@ export default function DetailPage() {
           </div>
 
           <div className="container-base-stats">
-            <p className="title-base-stats">Base stats</p>
+            <p className="title-base-stats">Base stats:</p>
             <div className="container-stats">
               {pokemonDetail.stats?.map((stat, index) => {
                 return (
@@ -92,7 +92,7 @@ export default function DetailPage() {
                 <div>
                   <ContainerBar
                     color={"none"}
-                    size={100}
+                    size={150}
                   ></ContainerBar>
                 </div>
               </div>
