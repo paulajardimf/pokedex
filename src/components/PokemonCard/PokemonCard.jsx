@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { PokemonCardStyled } from "./PokemonCardStyled";
-import pokeball from "../../assets/pngwing 2.png";
+import pokeball from "../../assets/pngwing2.png";
 import { getPokemonType } from "../../constants/types";
 import axios from "axios";
 import { goToDetailPage } from "../../routes/coordinator";
