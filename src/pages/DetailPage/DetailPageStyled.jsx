@@ -24,7 +24,7 @@ export const DetailPageStyled = styled.main`
   .container-img {
     display: flex;
     flex-direction: column;
-    padding-left: 3vw;
+    padding-left: 50px;
     justify-content: center;
     gap: 5vh;
     img {
@@ -38,18 +38,16 @@ export const DetailPageStyled = styled.main`
 
   .container-base-stats {
     align-self: center;
-    width: 343px;
+    width: 383px;
     height: 600px;
-    left: 360px;
-    top: 24px;
     background: #ffffff;
-    border-radius: 12px;
+    border-radius: 8px;
     .title-base-stats {
       padding: 30px;
       align-self: flex-start;
       font-style: normal;
       font-weight: 900;
-      font-size: 25px;
+      font-size: 1.5rem;
       line-height: 30px;
     }
     .container-stats {
@@ -67,7 +65,7 @@ export const DetailPageStyled = styled.main`
           font-weight: 300;
           padding: 5px 0;
           font-size: 0.875rem;
-          flex-grow: 1;
+          flex-grow: 2;
           text-transform: capitalize;
           .number-stat {
             flex-grow: 0;
@@ -78,7 +76,7 @@ export const DetailPageStyled = styled.main`
         .container-bar {
           display: flex;
           justify-content: start;
-          width: 100px;
+          width: 150px;
         }
       }
     }
@@ -87,8 +85,8 @@ export const DetailPageStyled = styled.main`
   .stat-total{
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    padding-right: 5px;
+    justify-content: center;
+    margin-right: 85px;
     padding: 5px 0;
     p{
       margin-left: 10px;
@@ -98,7 +96,7 @@ export const DetailPageStyled = styled.main`
   .container-details {
     display: flex;
     flex-direction: column;
-    padding-left: 50px;
+    padding-left: 20px;
 
     p {
       width: 30px;
@@ -142,10 +140,20 @@ export const DetailPageStyled = styled.main`
     display: flex;
     flex-direction: column;
     width: 292px;
-    height: 453px;
-    top: 170px;
+    height: 403px;
+    top: 230px;
     background: #ffffff;
     border-radius: 8px;
+
+    h1{
+      padding: 30px;
+      color: #000000;
+      align-self: flex-start;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 25px;
+      line-height: 30px;
+    }
 
     .container-move-types {
       display: flex;
@@ -192,6 +200,6 @@ export const ContainerBar = styled.div`
   height: 10px;
   border-radius: 8px;
   ${(props) => `
-    width: ${props.size}px;
+    width: ${props.size}%;
   `}
 `;
