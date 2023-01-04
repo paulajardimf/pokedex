@@ -68,7 +68,7 @@ export const PokemonCardStyled = styled.div`
     padding: 4px 10px;
     width: 146px;
     height: 38px;
-    background: #ffffff;
+    background-color: #ffffff;
     border-radius: 8px;
     border: none;
     cursor: pointer;
@@ -77,6 +77,10 @@ export const PokemonCardStyled = styled.div`
     right: 22px;
     z-index: 2;
     color: #000;
+  }
+  .excluir{
+    background-color: #FF6262;
+    color: #ffffff;
   }
   .pokeball {
     position: absolute;

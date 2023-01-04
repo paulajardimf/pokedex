@@ -13,4 +13,12 @@ export const PokedexPageStyled = styled.header`
     font-size: 3rem;
     color: #FFFFFF;
   }
+  .container-pokemons {
+    margin: 30px;
+  }
+  .container-pokemon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 `;

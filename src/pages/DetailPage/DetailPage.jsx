@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Header from "../../components/Header/Header";
-import { GlobalContext } from "../../contexts/GlobalContext";
 import { Card, ContainerBar, DetailPageStyled } from "./DetailPageStyled";
 import { BASE_URL } from "../../constants/url";
 import axios from "axios";
@@ -10,7 +9,6 @@ import { getPokemonColor } from "../../utils/ReturnGetPokemonColor";
 import pokeball from "../../assets/pngwing2.png";
 
 export default function DetailPage() {
-  const { page, setPage } = useContext(GlobalContext);
   const [pokemonDetail, setPokemonDetail] = useState({});
 
   const params = useParams();

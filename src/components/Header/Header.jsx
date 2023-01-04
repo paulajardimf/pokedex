@@ -2,12 +2,14 @@ import React, { useContext, useState } from "react";
 import { HeaderStyled } from "./HeaderStyled";
 import pokemon from "../../assets/pokemon.svg";
 import { goToHomePage, goToPokedexPage } from "../../routes/coordinator";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { GlobalContext } from "../../contexts/GlobalContext";
 
 export default function Header() {
-  const { page, setPage } = useContext(GlobalContext);
+  const { page, setPage, addToPokedex, removeFromPokedex, pokedex } = useContext(GlobalContext);
   const navigate = useNavigate();
+  const params = useParams()
+  
 
   return (
     <HeaderStyled>
@@ -46,14 +48,14 @@ export default function Header() {
             {"< Todos os Pokémons"}
           </button>
           <button
-            className="button-pokedex"
-            onClick={() => {
-              setPage("PokedexPage");
-              goToPokedexPage(navigate);
-            }}
-          >
-            Pokédex
-          </button>
+          className="button-pokedex"
+          onClick={() => {
+            setPage("PokedexPage");
+            goToPokedexPage(navigate);
+          }}
+        >
+          Pokédex
+        </button>
         </>
       )}
     </HeaderStyled>

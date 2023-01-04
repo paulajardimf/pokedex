@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const DetailPageStyled = styled.main`
   background-color: #5d5d5d;
-  height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -27,7 +26,7 @@ export const DetailPageStyled = styled.main`
     flex-direction: column;
     padding-left: 50px;
     justify-content: center;
-    gap: 3vh;
+    gap: 40px;
     img {
       width: 282px;
       height: 282px;
@@ -39,7 +38,7 @@ export const DetailPageStyled = styled.main`
   .container-base-stats {
     align-self: center;
     width: 383px;
-    height: 588px;
+    height: 613px;
     background: #ffffff;
     border-radius: 8px;
     .title-base-stats {
@@ -136,8 +135,8 @@ export const DetailPageStyled = styled.main`
       display: flex;
       flex-direction: column;
       width: 292px;
-      height: 397px;
-      top: 220px;
+      height: 453px;
+      bottom: 25px;
       background: #ffffff;
       border-radius: 8px;
 
@@ -185,11 +184,12 @@ export const Card = styled.div`
   display: flex;
   gap: 3vw;
   width: 90vw;
-  height: 47rem;
+  height: 663px;
   left: 0px;
   top: 0px;
   background-color: ${(props) => props.color};
   border-radius: 37.8857px;
+  margin-bottom: 50px;
 `;
 
 export const ContainerBar = styled.div`
