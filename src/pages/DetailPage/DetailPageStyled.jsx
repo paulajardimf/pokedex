@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const DetailPageStyled = styled.main`
   background-color: #5d5d5d;
+  height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -26,11 +27,10 @@ export const DetailPageStyled = styled.main`
     flex-direction: column;
     padding-left: 50px;
     justify-content: center;
-    gap: 5vh;
+    gap: 3vh;
     img {
       width: 282px;
       height: 282px;
-      border: 2px solid #ffffff;
       border-radius: 8px;
       background-color: #ffffff;
     }
@@ -39,7 +39,7 @@ export const DetailPageStyled = styled.main`
   .container-base-stats {
     align-self: center;
     width: 383px;
-    height: 600px;
+    height: 588px;
     background: #ffffff;
     border-radius: 8px;
     .title-base-stats {
@@ -69,7 +69,7 @@ export const DetailPageStyled = styled.main`
           text-transform: capitalize;
           .number-stat {
             flex-grow: 0;
-            padding: 0 10px;
+            padding: 0 20px;
             font-weight: 500;
           }
         }
@@ -79,24 +79,24 @@ export const DetailPageStyled = styled.main`
           width: 150px;
         }
       }
-    }
-  }
-
-  .stat-total{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 85px;
-    padding: 5px 0;
-    p{
-      margin-left: 10px;
+      .stat-total {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 105px;
+        padding: 5px 0;
+        font-weight: 600;
+        p {
+          margin-left: 10px;
+        }
+      }
     }
   }
 
   .container-details {
     display: flex;
     flex-direction: column;
-    padding-left: 20px;
+    padding-left: 10px;
 
     p {
       width: 30px;
@@ -113,46 +113,43 @@ export const DetailPageStyled = styled.main`
     h1 {
       font-style: normal;
       font-weight: 700;
-      font-size: 48px;
+      font-size: 3rem;
       line-height: 58px;
       color: #ffffff;
     }
-  }
+    .container-types {
+      margin-top: 10px;
+      display: flex;
+      gap: 5px;
 
-  .container-types {
-    margin-bottom: 52px;
-    margin-top: 10px;
-    display: flex;
-    gap: 5px;
-
-    img {
-      max-width: 100px;
-      height: 32px;
-      border-radius: 8px;
-      overflow: hidden;
-      border: 1px dashed #ffffff;
-      margin-right: 8px;
+      img {
+        max-width: 100px;
+        height: 32px;
+        border-radius: 8px;
+        overflow: hidden;
+        border: 1px dashed #ffffff;
+        margin-right: 8px;
+      }
     }
-  }
+    .container-moves {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      width: 292px;
+      height: 397px;
+      top: 220px;
+      background: #ffffff;
+      border-radius: 8px;
 
-  .container-moves {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    width: 292px;
-    height: 403px;
-    top: 230px;
-    background: #ffffff;
-    border-radius: 8px;
-
-    h1{
-      padding: 30px;
-      color: #000000;
-      align-self: flex-start;
-      font-style: normal;
-      font-weight: 900;
-      font-size: 25px;
-      line-height: 30px;
+      h1 {
+        padding: 30px;
+        color: #000000;
+        align-self: flex-start;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 25px;
+        line-height: 30px;
+      }
     }
 
     .container-move-types {
@@ -174,11 +171,11 @@ export const DetailPageStyled = styled.main`
     }
   }
   .img-card {
-    width: 200px;
-    height: 200px;
+    width: 270px;
+    height: 270px;
     position: absolute;
-    top: -60px;
-    right: 50px;
+    top: -80px;
+    right: 30px;
     z-index: 2;
   }
 `;
@@ -187,8 +184,8 @@ export const Card = styled.div`
   position: relative;
   display: flex;
   gap: 3vw;
-  width: 1389.14px;
-  height: 663px;
+  width: 90vw;
+  height: 47rem;
   left: 0px;
   top: 0px;
   background-color: ${(props) => props.color};
