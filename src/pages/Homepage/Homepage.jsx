@@ -4,6 +4,7 @@ import PokemonCard from "../../components/PokemonCard/PokemonCard";
 import { HomePageStyled } from "./HomePageStyled";
 import { GlobalContext } from "../../contexts/GlobalContext";
 import Modal from "../../components/Modal/Modal";
+import { BASE_URL } from "../../constants/url";
 
 export default function Homepage() {
   const {
@@ -33,6 +34,9 @@ export default function Homepage() {
           (pokemonInPokedex) => pokemonInList.name === pokemonInPokedex.name
         )
     );
+
+  console.log(pokelist);
+
   return (
     <HomePageStyled isModalOpen={isModalOpen}>
       {isModalOpen && <Modal />}
@@ -43,7 +47,7 @@ export default function Homepage() {
           {filteredPokemonlist().map((pokemon) => {
             return (
               <PokemonCard
-                pokemonUrl={pokemon.url}
+                pokemonUrl={`${BASE_URL}pokemon/${pokemon.name}`}
                 pokemon={pokemon}
                 key={pokemon.url}
               />

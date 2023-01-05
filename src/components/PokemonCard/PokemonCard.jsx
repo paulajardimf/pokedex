@@ -9,13 +9,17 @@ import { GlobalContext } from "../../contexts/GlobalContext";
 import { getPokemonColor } from "../../utils/ReturnGetPokemonColor";
 
 const PokemonCard = ({ pokemonUrl, pokemon }) => {
-  const { page, setPage, addToPokedex, removeFromPokedex, isModalopen, setIsModalOpen } =
-    useContext(GlobalContext);
+  const {
+    page,
+    setPage,
+    addToPokedex,
+    removeFromPokedex,
+    isModalopen,
+    setIsModalOpen,
+  } = useContext(GlobalContext);
   const [pokemonDetail, setPokemonDetail] = useState({});
 
   const navigate = useNavigate();
-
- 
 
   const fetchPokemonDetail = async () => {
     try {
@@ -46,17 +50,16 @@ const PokemonCard = ({ pokemonUrl, pokemon }) => {
             return <img src={getPokemonType(type.type.name)} key={index} />;
           })}
         </div>
-        {page === "PokedexPage" && (
-          <p
-            className="detalhes"
-            onClick={() => {
-              goToDetailPage(navigate, pokemon.name);
-              setPage("DetailPage");
-            }}
-          >
-            Detalhes
-          </p>
-        )}
+
+        <p
+          className="detalhes"
+          onClick={() => {
+            goToDetailPage(navigate, pokemon.name);
+            setPage("DetailPage");
+          }}
+        >
+          Detalhes
+        </p>
       </section>
       <section>
         <img

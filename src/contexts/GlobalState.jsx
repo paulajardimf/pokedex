@@ -33,8 +33,6 @@ export default function GlobalState() {
 
     if (!isAlreadyOnPokedex) {
       const newPokedex = [...pokedex, pokemonToAdd];
-      const pokedexJson = JSON.stringify(newPokedex);
-      localStorage.setItem("pokedex", pokedexJson);
       setPokedex(newPokedex);
     }
     filterPokemon(pokemonToAdd.name);

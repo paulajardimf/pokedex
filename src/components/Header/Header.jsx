@@ -1,15 +1,16 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { HeaderStyled } from "./HeaderStyled";
 import pokemon from "../../assets/pokemon.svg";
 import { goToHomePage, goToPokedexPage } from "../../routes/coordinator";
 import { useNavigate, useParams } from "react-router-dom";
 import { GlobalContext } from "../../contexts/GlobalContext";
 
-export default function Header() {
-  const { page, setPage, addToPokedex, removeFromPokedex, pokedex } = useContext(GlobalContext);
+export default function Header({pokemonObject}) {
+  const { page, setPage, addToPokedex, removeFromPokedex, pokedex } =
+    useContext(GlobalContext);
+
   const navigate = useNavigate();
-  const params = useParams()
-  
+  const params = useParams();
 
   return (
     <HeaderStyled>
@@ -47,15 +48,27 @@ export default function Header() {
           >
             {"< Todos os Pokémons"}
           </button>
-          <button
-          className="button-pokedex"
-          onClick={() => {
-            setPage("PokedexPage");
-            goToPokedexPage(navigate);
-          }}
-        >
-          Pokédex
-        </button>
+
+          {pokemonObject && pokedex.includes(pokemonObject) && (
+            <button
+              className="button-delete"
+              onClick={() => {
+                removeFromPokedex(pokemonObject);
+              }}
+            >
+              Excluir da Pokédex
+            </button>
+          )}
+          {pokemonObject && !pokedex.includes(pokemonObject) && (
+            <button
+              className="button-add"
+              onClick={() => {
+                addToPokedex(pokemonObject);
+              }}
+            >
+              Adicionar à Pokédex
+            </button>
+          )}
         </>
       )}
     </HeaderStyled>
