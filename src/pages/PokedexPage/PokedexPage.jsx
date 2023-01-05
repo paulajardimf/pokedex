@@ -6,24 +6,25 @@ import { GlobalContext } from "../../contexts/GlobalContext";
 import { PokedexPageStyled } from "./PokedexPageStyled";
 
 export default function PokedexPage() {
-  const {pokedex, isModalOpen} = useContext(GlobalContext)
+  const { pokedex, isModalOpen } = useContext(GlobalContext);
   return (
-    <>
-    {isModalOpen && <Modal />}
-    <Header/>
-      <PokedexPageStyled>
-      <section>
-        <h1>Meus Pokémons</h1>
+    <PokedexPageStyled>
+      {isModalOpen && <Modal />}
+      <Header />
+      <section className="container-pokemons">
+        <h1 className="title">Meus Pokémons</h1>
         <section className="container-pokemon">
           {pokedex.map((pokemon) => {
             return (
-              <PokemonCard pokemonUrl={pokemon.url} pokemon={pokemon} key={pokemon.url} />
+              <PokemonCard
+                pokemonUrl={pokemon.url}
+                pokemon={pokemon}
+                key={pokemon.url}
+              />
             );
           })}
         </section>
-        </section>
-
-      </PokedexPageStyled>
-    </>
+      </section>
+    </PokedexPageStyled>
   );
 }

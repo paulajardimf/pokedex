@@ -5,16 +5,13 @@ export const PokedexPageStyled = styled.header`
   height: 100vh;
   display: flex;
   flex-direction: column;
-  section{
-    margin: 30px;
-  }
-  h1{
-    font-weight: 700;
-    font-size: 3rem;
-    color: #FFFFFF;
-  }
   .container-pokemons {
     margin: 30px;
+  }
+  .title {
+    font-weight: 700;
+    font-size: 3rem;
+    color: #ffffff;
   }
   .container-pokemon {
     display: flex;
