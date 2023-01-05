@@ -1,13 +1,15 @@
 import React, { useContext } from "react";
 import Header from "../../components/Header/Header";
+import Modal from "../../components/Modal/Modal";
 import PokemonCard from "../../components/PokemonCard/PokemonCard";
 import { GlobalContext } from "../../contexts/GlobalContext";
 import { PokedexPageStyled } from "./PokedexPageStyled";
 
 export default function PokedexPage() {
-  const {pokedex} = useContext(GlobalContext)
+  const {pokedex, isModalOpen} = useContext(GlobalContext)
   return (
     <>
+    {isModalOpen && <Modal />}
     <Header/>
       <PokedexPageStyled>
       <section>
@@ -15,7 +17,7 @@ export default function PokedexPage() {
         <section className="container-pokemon">
           {pokedex.map((pokemon) => {
             return (
-              <PokemonCard pokemonUrl={pokemon.url} pokemon={pokemon} key={pokemon.id} />
+              <PokemonCard pokemonUrl={pokemon.url} pokemon={pokemon} key={pokemon.url} />
             );
           })}
         </section>
