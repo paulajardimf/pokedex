@@ -9,12 +9,15 @@ import { GlobalContext } from "../../contexts/GlobalContext";
 import { getPokemonColor } from "../../utils/ReturnGetPokemonColor";
 
 const PokemonCard = ({ pokemonUrl, pokemon }) => {
-  const { page, setPage, addToPokedex, removeFromPokedex} = useContext(GlobalContext);
+  const { page, setPage, addToPokedex, removeFromPokedex, isModalopen, setIsModalOpen } =
+    useContext(GlobalContext);
   const [pokemonDetail, setPokemonDetail] = useState({});
 
   const navigate = useNavigate();
 
-  const fetchPokemon = async () => {
+ 
+
+  const fetchPokemonDetail = async () => {
     try {
       const response = await axios.get(pokemonUrl);
       setPokemonDetail(response.data);
@@ -24,7 +27,7 @@ const PokemonCard = ({ pokemonUrl, pokemon }) => {
   };
 
   useEffect(() => {
-    fetchPokemon();
+    fetchPokemonDetail();
   }, []);
 
   return (
@@ -43,15 +46,17 @@ const PokemonCard = ({ pokemonUrl, pokemon }) => {
             return <img src={getPokemonType(type.type.name)} key={index} />;
           })}
         </div>
-        {page === "PokedexPage" && <p
-          className="detalhes"
-          onClick={() => {
-            goToDetailPage(navigate, pokemon.name);
-            setPage("DetailPage"); 
-          }}
-        >
-          Detalhes
-        </p>}
+        {page === "PokedexPage" && (
+          <p
+            className="detalhes"
+            onClick={() => {
+              goToDetailPage(navigate, pokemon.name);
+              setPage("DetailPage");
+            }}
+          >
+            Detalhes
+          </p>
+        )}
       </section>
       <section>
         <img
@@ -59,9 +64,17 @@ const PokemonCard = ({ pokemonUrl, pokemon }) => {
           src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonDetail.id}.png`}
           alt={pokemon.name}
         />
-        {page === "HomePage" && <button onClick={() => addToPokedex(pokemon)}>Capturar!</button>}
-        {page === "PokedexPage" && <button className="excluir" onClick={() => removeFromPokedex(pokemon)}>Excluir</button>}
-        
+        {page === "HomePage" && (
+          <button onClick={() => addToPokedex(pokemon)}>Capturar!</button>
+        )}
+        {page === "PokedexPage" && (
+          <button
+            className="excluir"
+            onClick={() => removeFromPokedex(pokemon)}
+          >
+            Excluir
+          </button>
+        )}
       </section>
       <img className="pokeball" src={pokeball} alt="pokeball" />
     </PokemonCardStyled>

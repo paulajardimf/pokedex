@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Header from "../../components/Header/Header";
 import { Card, ContainerBar, DetailPageStyled } from "./DetailPageStyled";
@@ -88,10 +88,7 @@ export default function DetailPage() {
                 <p>Total</p>
                 <p>{pokemonDetail.stats && totalStats(pokemonDetail.stats)}</p>
                 <div>
-                  <ContainerBar
-                    color={"none"}
-                    size={150}
-                  ></ContainerBar>
+                  <ContainerBar color={"none"} size={150}></ContainerBar>
                 </div>
               </div>
             </div>
