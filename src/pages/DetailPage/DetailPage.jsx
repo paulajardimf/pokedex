@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Header from "../../components/Header/Header";
 import { Card, ContainerBar, DetailPageStyled } from "./DetailPageStyled";
@@ -7,8 +7,11 @@ import axios from "axios";
 import { getPokemonType } from "../../constants/types";
 import { getPokemonColor } from "../../utils/ReturnGetPokemonColor";
 import pokeball from "../../assets/pngwing2.png";
+import Modal from "../../components/Modal/Modal";
+import { GlobalContext } from "../../contexts/GlobalContext";
 
 export default function DetailPage() {
+  const {isModalOpen} = useContext(GlobalContext)
   const [pokemonDetail, setPokemonDetail] = useState({});
 
   const params = useParams();
@@ -47,7 +50,8 @@ export default function DetailPage() {
 
   return (
     <>
-      <Header />
+      {isModalOpen && <Modal />}
+      <Header pokemonObject={pokemonDetail} />
       <DetailPageStyled>
         <h1 className="title">Detalhes</h1>
         <Card

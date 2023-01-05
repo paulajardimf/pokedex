@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import Header from "../../components/Header/Header";
 import Modal from "../../components/Modal/Modal";
 import PokemonCard from "../../components/PokemonCard/PokemonCard";
+import { BASE_URL } from "../../constants/url";
 import { GlobalContext } from "../../contexts/GlobalContext";
 import { PokedexPageStyled } from "./PokedexPageStyled";
 
@@ -17,7 +18,7 @@ export default function PokedexPage() {
           {pokedex.map((pokemon) => {
             return (
               <PokemonCard
-                pokemonUrl={pokemon.url}
+                pokemonUrl={`${BASE_URL}pokemon/${pokemon.name}`}
                 pokemon={pokemon}
                 key={pokemon.url}
               />
