@@ -6,7 +6,15 @@ import { GlobalContext } from "../../contexts/GlobalContext";
 import Modal from "../../components/Modal/Modal";
 
 export default function Homepage() {
-  const { pokedex, setPokedex, pokelist, setPokelist, addToPokedex, fetchPokemons, isModalOpen } = useContext(GlobalContext);
+  const {
+    pokedex,
+    setPokedex,
+    pokelist,
+    setPokelist,
+    addToPokedex,
+    fetchPokemons,
+    isModalOpen,
+  } = useContext(GlobalContext);
 
   useEffect(() => {
     fetchPokemons();
@@ -27,8 +35,8 @@ export default function Homepage() {
     );
   return (
     <HomePageStyled isModalOpen={isModalOpen}>
+      {isModalOpen && <Modal />}
       <Header />
-       {isModalOpen && <Modal />}
       <section className="container-pokemons">
         <h1 className="title">Todos os Pokémons</h1>
         <section className="container-pokemon">
