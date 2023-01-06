@@ -1,17 +1,31 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
 
 export const PokedexPageStyled = styled.header`
   background-color: #5d5d5d;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  left: 0;
+  right: 0;
+
   .container-pokemons {
     margin: 30px;
+    padding-bottom: 50px;
   }
   .title {
     font-weight: 700;
     font-size: 3rem;
     color: #ffffff;
+    margin-left: 35px;
     margin-bottom: 30px;
   }
   .container-pokemon {
@@ -23,14 +37,15 @@ export const PokedexPageStyled = styled.header`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 7vh;
+    justify-content: center;
+    animation: ${fadeIn} 0.5s ease-in-out;
     h1{
       color: #ffffff;
       font-size: 2rem;
       margin-bottom: 30px;
     }
     img {
-      width: 450px;
+      width: 400px;
     }
   }
 `;

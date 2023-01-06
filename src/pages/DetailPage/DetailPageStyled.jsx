@@ -1,4 +1,13 @@
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
 
 export const DetailPageStyled = styled.main`
   background-color: #5d5d5d;
@@ -190,8 +199,9 @@ export const Card = styled.div`
   top: 0px;
   background-color: ${(props) => props.color};
   border-radius: 37.8857px;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   transition: box-shadow 0.2s ease;
+  animation: ${fadeIn} 0.5s ease-in-out;
 `;
 
 export const ContainerBar = styled.div`

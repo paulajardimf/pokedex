@@ -1,4 +1,13 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
 
 export const ModalStyled = styled.header`
   display: flex;
@@ -8,6 +17,7 @@ export const ModalStyled = styled.header`
   backdrop-filter: blur(10px);
   z-index: 3;
   position: fixed;
+  animation: ${fadeIn} 0.1s ease-in-out;
   .modal {
     display: flex;
     flex-direction: column;

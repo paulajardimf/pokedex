@@ -9,6 +9,9 @@ export const HomePageStyled = styled.main`
   background-color: #5d5d5d;
   display: flex;
   flex-direction: column;
+  left: 0;
+  right: 0;
+  padding-bottom: 50px;
   .container-pokemons {
     margin: 30px;
   }
@@ -31,7 +34,7 @@ export const ScrollTopBtn = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  bottom: 5vh;
+  bottom: 10vh;
   right: 5vw;
   background-color: #ffffff;
   border: none;

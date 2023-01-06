@@ -9,6 +9,7 @@ import { getPokemonColor } from "../../utils/ReturnGetPokemonColor";
 import pokeball from "../../assets/pngwing2.png";
 import Modal from "../../components/Modal/Modal";
 import { GlobalContext } from "../../contexts/GlobalContext";
+import Footer from "../../components/Footer/Footer";
 
 export default function DetailPage() {
   const {isModalOpen} = useContext(GlobalContext)
@@ -149,6 +150,7 @@ export default function DetailPage() {
           />
         </Card>
       </DetailPageStyled>
+      <Footer />
     </>
   );
 }

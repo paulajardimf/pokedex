@@ -5,6 +5,7 @@ import { HomePageStyled, ScrollTopBtn } from "./HomePageStyled";
 import { GlobalContext } from "../../contexts/GlobalContext";
 import Modal from "../../components/Modal/Modal";
 import { BASE_URL } from "../../constants/url";
+import Footer from "../../components/Footer/Footer";
 
 export default function Homepage() {
   const { pokedex, pokelist, fetchPokemons, isModalOpen } =
@@ -40,6 +41,7 @@ export default function Homepage() {
   }, []);
 
   return (
+    <>
     <HomePageStyled isModalOpen={isModalOpen}>
       {isModalOpen && <Modal />}
       <Header />
@@ -59,5 +61,7 @@ export default function Homepage() {
       </section>
       <ScrollTopBtn id="scroll-top-btn">^</ScrollTopBtn>
     </HomePageStyled>
+    <Footer />
+    </>
   );
 }

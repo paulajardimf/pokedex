@@ -6,6 +6,7 @@ import { BASE_URL } from "../../constants/url";
 import { GlobalContext } from "../../contexts/GlobalContext";
 import { PokedexPageStyled } from "./PokedexPageStyled";
 import pokedexImg from "../../assets/pokedex.png";
+import Footer from "../../components/Footer/Footer";
 
 export default function PokedexPage() {
   const { pokedex, isModalOpen } = useContext(GlobalContext);
@@ -34,6 +35,7 @@ export default function PokedexPage() {
           })}
         </section>
       </section>
+      <Footer />
     </PokedexPageStyled>
   );
 }
