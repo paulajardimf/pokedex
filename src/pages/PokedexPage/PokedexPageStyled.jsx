@@ -18,4 +18,18 @@ export const PokedexPageStyled = styled.header`
     flex-wrap: wrap;
     justify-content: center;
   }
+  .pokedex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 7vh;
+    h1{
+      color: #ffffff;
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+    img {
+      width: 450px;
+    }
+  }
 `;
