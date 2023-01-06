@@ -5,6 +5,7 @@ export const DetailPageStyled = styled.main`
   display: flex;
   align-items: center;
   flex-direction: column;
+  
 
   .title {
     font-weight: 700;
@@ -190,6 +191,7 @@ export const Card = styled.div`
   background-color: ${(props) => props.color};
   border-radius: 37.8857px;
   margin-bottom: 50px;
+  transition: box-shadow 0.2s ease;
 `;
 
 export const ContainerBar = styled.div`

@@ -12,6 +12,7 @@ export const PokedexPageStyled = styled.header`
     font-weight: 700;
     font-size: 3rem;
     color: #ffffff;
+    margin-bottom: 30px;
   }
   .container-pokemon {
     display: flex;
