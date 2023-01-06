@@ -10,6 +10,7 @@ export const PokemonCardStyled = styled.div`
   position: relative;
   margin: 33px;
   color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
   p {
     font-family: "Inter", sans-serif;
@@ -25,7 +26,8 @@ export const PokemonCardStyled = styled.div`
     text-align: left;
     margin-bottom: 10px;
   }
-  .name{
+
+  .name {
     text-transform: capitalize;
   }
 
@@ -43,7 +45,7 @@ export const PokemonCardStyled = styled.div`
     }
   }
 
-  .detalhes{
+  .detalhes {
     position: absolute;
     bottom: 20px;
     color: #ffffff;
@@ -77,15 +79,33 @@ export const PokemonCardStyled = styled.div`
     right: 22px;
     z-index: 2;
     color: #000;
+    transition: box-shadow 0.2s ease;
   }
-  .excluir{
-    background-color: #FF6262;
+
+  button:hover {
+    background-color: #caffcc;
+  }
+
+  button:active {
+    background-color: #00b306;
+  }
+  
+  .excluir {
+    background-color: #ff6262;
     color: #ffffff;
   }
+
+  .excluir:hover {
+    background-color: #fb2d2d;
+  }
+
+  .excluir:active {
+    background-color: #ff0000;
+  }
+
   .pokeball {
     position: absolute;
     top: 0;
     right: 0;
   }
 `;
-

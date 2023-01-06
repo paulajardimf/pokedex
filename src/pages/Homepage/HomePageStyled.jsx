@@ -17,6 +17,7 @@ export const HomePageStyled = styled.main`
     font-size: 3rem;
     color: #ffffff;
     margin-left: 35px;
+    margin-bottom: 30px;
   }
   .container-pokemon {
     display: flex;
@@ -45,4 +46,12 @@ export const ScrollTopBtn = styled.div`
   color: #5d5d5d;
   z-index: 4;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+  :hover {
+    background-color: lightgray;
+  }
+
+  :active {
+    background-color: darkgray;
+  }
 `;
