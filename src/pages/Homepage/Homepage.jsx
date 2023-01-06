@@ -59,7 +59,7 @@ export default function Homepage() {
           })}
         </section>
       </section>
-      <ScrollTopBtn id="scroll-top-btn">^</ScrollTopBtn>
+      <ScrollTopBtn id="scroll-top-btn">🠕</ScrollTopBtn>
     </HomePageStyled>
     <Footer />
     </>
