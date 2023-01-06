@@ -1,21 +1,14 @@
 import React, { useContext, useEffect, useState } from "react";
 import Header from "../../components/Header/Header";
 import PokemonCard from "../../components/PokemonCard/PokemonCard";
-import { HomePageStyled } from "./HomePageStyled";
+import { HomePageStyled, ScrollTopBtn } from "./HomePageStyled";
 import { GlobalContext } from "../../contexts/GlobalContext";
 import Modal from "../../components/Modal/Modal";
 import { BASE_URL } from "../../constants/url";
 
 export default function Homepage() {
-  const {
-    pokedex,
-    setPokedex,
-    pokelist,
-    setPokelist,
-    addToPokedex,
-    fetchPokemons,
-    isModalOpen,
-  } = useContext(GlobalContext);
+  const { pokedex, pokelist, fetchPokemons, isModalOpen } =
+    useContext(GlobalContext);
 
   useEffect(() => {
     fetchPokemons();
@@ -35,6 +28,15 @@ export default function Homepage() {
         )
     );
 
+  document
+    .getElementById("scroll-top-btn")
+    .addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+
   return (
     <HomePageStyled isModalOpen={isModalOpen}>
       {isModalOpen && <Modal />}
@@ -53,6 +55,7 @@ export default function Homepage() {
           })}
         </section>
       </section>
+      <ScrollTopBtn id="scroll-top-btn">^</ScrollTopBtn>
     </HomePageStyled>
   );
 }

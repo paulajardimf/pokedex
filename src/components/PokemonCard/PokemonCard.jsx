@@ -13,9 +13,7 @@ const PokemonCard = ({ pokemonUrl, pokemon }) => {
     page,
     setPage,
     addToPokedex,
-    removeFromPokedex,
-    isModalopen,
-    setIsModalOpen,
+    removeFromPokedex
   } = useContext(GlobalContext);
   const [pokemonDetail, setPokemonDetail] = useState({});
 
