@@ -51,7 +51,7 @@ export const HeaderStyled = styled.header`
     font-weight: 600;
     font-size: 1.5rem;
     text-decoration: underline;
-    margin-left: 30px;
+    margin-left: 60px;
   }
   .button-delete {
     background-color: #ff6262;
