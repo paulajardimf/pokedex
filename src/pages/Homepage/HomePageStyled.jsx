@@ -41,11 +41,11 @@ export const ScrollTopBtn = styled.div`
   outline: none;
   cursor: pointer;
   padding: 10px;
-  height: 50px;
-  width: 50px;
+  height: 65px;
+  width: 65px;
   border-radius: 50px;
-  font-size: 2rem;
-  font-weight: 400;
+  font-size: 2.5rem;
+  font-weight: 900;
   color: #5d5d5d;
   z-index: 4;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);

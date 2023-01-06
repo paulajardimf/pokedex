@@ -1,9 +1,10 @@
 
 # Pokedex
 
-![Badge Em Andamento](http://img.shields.io/static/v1?label=STATUS&message=EM+ANDAMENTO&color=RED&style=for-the-badge)
+![Badge Finalizado](http://img.shields.io/static/v1?label=STATUS&message=FINALIZADO&color=RED&style=for-the-badge)
 
-Projeto de uma pokedex.
+Projeto de uma pokedex, onde é possível adicionar os pokemons, excluir e ver seus detalhes.
+Foi utilizado consumo da API <https://pokeapi.co/>.
 
 
 
@@ -20,10 +21,9 @@ Projeto de uma pokedex.
 - ``React.js``
 - ``Vite.js``
 - ``Styled Components``
-- ``Local Storage``
 - ``React Hooks``
 - ``Axios``
-- ``API``
+- ``API Rest``
 
 ## Imagem do projeto:
 
@@ -32,7 +32,7 @@ Projeto de uma pokedex.
 
 ## Deploy:
 
-- ``Vercel`` | Link: <>
+- ``Vercel`` | Link: <https://pokedex-paulajardimf.vercel.app/>
 
 
 ## Rodando o projeto:
