@@ -35,8 +35,6 @@ export default function Homepage() {
         )
     );
 
-  console.log(pokelist);
-
   return (
     <HomePageStyled isModalOpen={isModalOpen}>
       {isModalOpen && <Modal />}

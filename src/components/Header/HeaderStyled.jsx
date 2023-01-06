@@ -7,6 +7,10 @@ export const HeaderStyled = styled.header`
   position: relative;
   align-items: center;
 
+  a, button{
+    cursor: pointer;
+  }
+
   img {
     position: absolute;
     top: 50%;
