@@ -28,14 +28,16 @@ export default function Homepage() {
         )
     );
 
-  document
-    .getElementById("scroll-top-btn")
-    .addEventListener("click", function () {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
+  useEffect(() => {
+    document
+      .getElementById("scroll-top-btn")
+      .addEventListener("click", function () {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
       });
-    });
+  }, []);
 
   return (
     <HomePageStyled isModalOpen={isModalOpen}>
