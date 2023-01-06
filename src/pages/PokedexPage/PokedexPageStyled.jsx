@@ -1,8 +1,17 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
 
 export const PokedexPageStyled = styled.header`
   background-color: #5d5d5d;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   .container-pokemons {
@@ -23,7 +32,8 @@ export const PokedexPageStyled = styled.header`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 7vh;
+    padding-top: 4.5vh;
+    animation: ${fadeIn} 0.5s ease-in-out;
     h1{
       color: #ffffff;
       font-size: 2rem;

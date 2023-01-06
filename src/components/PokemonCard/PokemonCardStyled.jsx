@@ -1,4 +1,13 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
 
 export const PokemonCardStyled = styled.div`
   padding: 16px;
@@ -11,6 +20,7 @@ export const PokemonCardStyled = styled.div`
   margin: 33px;
   color: #ffffff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: ${fadeIn} 1.5s ease-in-out;
 
   p {
     font-family: "Inter", sans-serif;
@@ -42,6 +52,7 @@ export const PokemonCardStyled = styled.div`
       overflow: hidden;
       border: 1px dashed #ffffff;
       margin-right: 8px;
+      animation: ${fadeIn} 2s ease-in-out;
     }
   }
 
@@ -60,6 +71,7 @@ export const PokemonCardStyled = styled.div`
     top: -60px;
     right: 0;
     z-index: 2;
+    animation: ${fadeIn} 1.5s ease-in-out;
   }
 
   button {
@@ -78,7 +90,7 @@ export const PokemonCardStyled = styled.div`
     bottom: 10px;
     right: 22px;
     z-index: 2;
-    color: #000;
+    color: #000000;
     transition: box-shadow 0.2s ease;
   }
 
@@ -109,3 +121,5 @@ export const PokemonCardStyled = styled.div`
     right: 0;
   }
 `;
+
+
